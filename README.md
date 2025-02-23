@@ -1,1 +1,1 @@
-This is a test to check if the Worklflow is running
+This is a test to check if the Workflow is running
