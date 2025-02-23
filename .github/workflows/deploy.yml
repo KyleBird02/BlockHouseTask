@@ -1,4 +1,4 @@
-name: Deploy FastAPI App to EC2 #Deploy
+name: Deploy to EC2
 
 on:
   push:
@@ -10,20 +10,25 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out code
-        uses: actions/checkout@v2
+      # Step 1: Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-      - name: Set up SSH key
-        uses: webfactory/ssh-agent@v0.5.3
+      # Step 2: Install SSH key
+      - name: Install SSH key
+        uses: shimataro/ssh-key-action@v2
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
 
+      # Step 3: Deploy to EC2
       - name: Deploy to EC2
         run: |
-          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_IP }} << 'EOF'
-            cd /home/ubuntu/BlockHouseTask
-            git pull origin main
-            source venv/bin/activate
-            pip install -r requirements.txt
-            sudo systemctl restart fastapi
-          EOF
+          set -e
+          echo "Deploying to EC2 instance..."
+          ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_IP }} "
+            cd /home/ubuntu/BlockHouseTask || exit 1 &&
+            git pull origin main || exit 1 &&
+            docker-compose down || exit 1 &&
+            docker-compose up -d || exit 1
+          "
