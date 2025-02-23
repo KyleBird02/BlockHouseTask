@@ -1,4 +1,4 @@
-name: Deploy FastAPI App to EC2
+name: Deploy FastAPI App to EC2 #Deploy
 
 on:
   push:
