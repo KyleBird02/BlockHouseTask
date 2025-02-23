@@ -28,7 +28,5 @@ jobs:
           echo "Deploying to EC2 instance..."
           ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_IP }} "
             cd /home/ubuntu/BlockHouseTask || exit 1 &&
-            git pull origin main || exit 1 &&
-            docker-compose down || exit 1 &&
-            docker-compose up -d || exit 1
+            git pull origin main || exit 1 
           "
