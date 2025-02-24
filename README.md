@@ -20,7 +20,7 @@ This project is a backend service built using Python's FastAPI framework. It pro
 
 ## System Architecture
 
-![alt text](https://i.postimg.cc/qMr7ntST/Network-diagram-example-Page-1.png)
+![alt text](https://i.postimg.cc/pX5wBxhJ/Network-diagram-example-Page-1-1.png)
 
 ## Features
 
