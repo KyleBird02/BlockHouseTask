@@ -11,7 +11,7 @@ This project is a simple FastAPI application that exposes REST APIs for managing
 4. [Running with Docker](#4-running-with-docker)
 5. [Deploying to AWS EC2 (CI/CD)](#5-deploying-to-aws-ec2-cicd)
 6. [Stopping the Service](#6-stopping-the-service)
-7. [API Documentation](#api-documentation)
+7. [API Documentation](#api-endpoints)
 
 ---
 ## Overview
