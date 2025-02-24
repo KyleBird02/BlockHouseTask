@@ -79,28 +79,28 @@ Or stop the FastAPI server if running locally.
 
 # API Endpoints
 
-1. Create Order
+### 1. Create Order
 
-Endpoint: POST /orders
+**Endpoint: POST /orders**
 
 Description: Creates a new trade order.
 
 Request Body:
-
+```json
 {
   "symbol": "AAPL",
   "price": 150.5,
   "quantity": 10,
   "order_type": "buy"
 }
-
+```
 Response:
-
+```json
 {
   "message": "Order created"
 }
-
-2. Retrieve All Orders
+```
+### 2. Retrieve All Orders
 
 Endpoint: GET /orders
 
@@ -108,6 +108,7 @@ Description: Retrieves all stored trade orders.
 
 Response:
 
+```json
 {
   "orders": [
     {
@@ -119,8 +120,8 @@ Response:
     }
   ]
 }
-
-3. Delete All Orders
+```
+### 3. Delete All Orders
 
 Endpoint: DELETE /orders
 
@@ -128,30 +129,36 @@ Description: Deletes all trade orders.
 
 Response:
 
+```json
 {
   "message": "All orders deleted"
 }
+```
 
-4. Drop and Recreate Orders Table
+### 4. Drop and Recreate Orders Table
 
 Endpoint: DELETE /drop-table
 
 Description: Deletes the orders table and recreates it.
 
 Response:
-
+```json
 {
   "message": "Table deleted and recreated"
 }
+```
 
-Deployment (Docker & AWS EC2)
+# Deployment (Docker & AWS EC2)
 
 The application is deployed using Docker on an AWS EC2 instance via GitHub Actions CI/CD.
 
-1. Build & Run Docker Container
+### 1. Build & Run Docker Container
 
+```bash
 docker-compose up -d --build
+```
 
-2. Access Running Container
-
+### 2. Access Running Container
+```bash
 docker ps
+```
