@@ -89,9 +89,9 @@ Description: Creates a new trade order.
 Request Body:
 ```json
 {
-  "symbol": "AAPL",
-  "price": 150.5,
-  "quantity": 10,
+  "symbol": "KMD",
+  "price": 123.45,
+  "quantity": 5,
   "order_type": "buy"
 }
 ```
@@ -114,8 +114,8 @@ Response:
   "orders": [
     {
       "id": 1,
-      "symbol": "AAPL",
-      "price": 150.5,
+      "symbol": "KMD",
+      "price": 123.45,
       "quantity": 10,
       "order_type": "buy"
     }
