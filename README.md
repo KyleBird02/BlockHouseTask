@@ -18,6 +18,10 @@ This project is a simple FastAPI application that exposes REST APIs for managing
 
 This project is a backend service built using Python's FastAPI framework. It provides a set of RESTful APIs for managing tasks in the BlockHouse application. The service is containerized with Docker, deployed on an AWS EC2 instance, and follows CI/CD practices using GitHub Actions.
 
+## System Architecture
+
+![alt text](https://i.postimg.cc/qMr7ntST/Network-diagram-example-Page-1.png)
+
 ## Features
 
 - **FastAPI** for building high-performance APIs
