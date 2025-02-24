@@ -5,12 +5,13 @@ This project is a simple FastAPI application that exposes REST APIs for managing
 ---
 
 ## Table of Contents
-1. [Clone the Repository](#clone-the-repository)
-2. [Install Dependencies](#install-dependencies)
-3. [Running Locally](#running-locally)
-4. [Running with Docker](#running-with-docker)
-5. [Deploying to AWS EC2 (CI/CD)](#deploying-to-aws-ec2-cicd)
-6. [Stopping the Service](#stopping-the-service)
+1. [Clone the Repository](#1-clone-the-repository)
+2. [Install Dependencies](#2-install-dependencies)
+3. [Running Locally](#3-running-locally)
+4. [Running with Docker](#4-running-with-docker)
+5. [Deploying to AWS EC2 (CI/CD)](#5-deploying-to-aws-ec2-cicd)
+6. [Stopping the Service](#6-stopping-the-service)
+7. [API Documentation](#api-documentation)
 
 ---
 ## Overview
@@ -33,7 +34,7 @@ This project is a backend service built using Python's FastAPI framework. It pro
 
 ## Getting Started
 
-### #1. Clone the Repository
+### 1. Clone the Repository
 
 Clone this repository to your local machine:
 
