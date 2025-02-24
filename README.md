@@ -33,7 +33,7 @@ This project is a backend service built using Python's FastAPI framework. It pro
 
 ## Getting Started
 
-### 1. Clone the Repository
+### #1. Clone the Repository
 
 Clone this repository to your local machine:
 
